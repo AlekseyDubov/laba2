@@ -12,7 +12,8 @@ void main ()
 	scanf("%f", &c);
 	if (a == 0) printf("\a\n Уравнение не имеет корней! "); 
     else 
-	{  
+	{
+	d = b * b - 4 * a * c;
         if (d < 0) printf("\a\n Уравнение не имеет вещественных корней! "); 
         else 
         {	
@@ -24,7 +25,9 @@ void main ()
 	        } 
 				else 
 				{ 
-
+					x1 = (-b - sqrt(d)) / (2 * a); 
+					x2 = (-b + sqrt(d)) / (2 * a); 
+					printf (" Уравнение имеет два корня: \n x1 = %f\n x2 = %f\n" , x1, x2);
 				}
 		}
 	}
